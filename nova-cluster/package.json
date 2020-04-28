@@ -1,0 +1,14 @@
+{
+  "name": "nova-proxy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Tarun Kumar Sukhu",
+  "license": "MIT",
+  "dependencies": {
+    "ara-cli": "^1.0.0-alpha.4",
+    "cross-env": "^7.0.2"
+  },
+  "scripts": {
+    "cluster": "cross-env PORT=8001 ara run:cluster --config ./views.json"
+  }
+}

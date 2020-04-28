@@ -1,0 +1,8 @@
+{
+  "Example": {
+    "server": "http://localhost:3000/batch"
+  },
+  "Example-Vue": {
+    "server": "http://localhost:3001/batch"
+  }
+}
