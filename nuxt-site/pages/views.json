@@ -1,0 +1,4 @@
+{
+  "Example": "http://localhost:3000/public/client.js",
+  "Example-Vue": "http://localhost:3001/public/client.js"
+}

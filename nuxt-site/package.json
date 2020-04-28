@@ -19,6 +19,7 @@
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",
     "cross-env": "^7.0.2",
+    "nova-helpers": "^1.0.2-alpha.0",
     "nova-vue-bridge": "^1.1.0",
     "nuxt": "^2.0.0"
   },

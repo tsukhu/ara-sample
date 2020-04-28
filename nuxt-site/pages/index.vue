@@ -4,13 +4,13 @@
       <logo />
       <!-- Nova component starts -->
       <nova name="Example" :data="{ title: 'Ara Framework' }" />
-        <nova name="Example-Vue" :data="{ title: 'two Ara Framework' }" />
+      <nova name="Example-Vue" :data="{ title: 'two Ara Framework' }" />
       <!-- Nova component ends -->
       <h1 class="title">app-shell</h1>
       <h2 class="subtitle">NuxtJS based App Shell</h2>
       <input v-model="message" placeholder="edit me" v-on:keyup="changeHandler" />
       <p>Message is: {{ message }}</p>
-     
+
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
         <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
@@ -22,23 +22,38 @@
 <script lang="ts">
 import Vue from 'vue'
 import Nova from 'nova-vue-bridge'
+import { loadScript } from 'nova-helpers'
 import Logo from '~/components/Logo.vue'
+
+import entryPoints from './views.json'
 
 export default Vue.extend({
   components: {
     Logo,
     Nova
   },
-  head: {
+  /*   head: {
     script: [
       { src: 'http://localhost:3000/public/client.js' },
       { src: 'http://localhost:3001/public/client.js' }
     ]
-  },
+  } ,*/
   data: function() {
     return {
       message: 'Some Message'
     }
+  },
+  created() {
+      if (typeof document !== "undefined") {
+    document.addEventListener('NovaMount', ({ detail }) => {
+      const { name } = detail
+
+      const script = entryPoints[name]
+
+      if (script) {
+        loadScript(script)
+      }
+    })}
   },
   methods: {
     changeHandler: function(event: any) {
