@@ -8,6 +8,7 @@
     "start": "node dist/server.js"
   },
   "dependencies": {
+    "d3-scale": "^3.2.1",
     "hypernova": "^2.5.0",
     "hypernova-svelte": "^1.2.0",
     "svelte": "^3.4.4"
