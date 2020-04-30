@@ -4,7 +4,10 @@
       <logo />
       <!-- Nova component starts -->
       <nova name="Example" :data="{ title: 'Ara Framework' }" />
-      <nova name="Example-Vue" :data="{ title: 'two Ara Framework' }" />
+      <hr/>
+      <nova name="ExampleVue" :data="{ title: 'two Ara Framework' }" />
+       <hr/>
+      <nova name="ExampleSvelteCSR" :data="{ title: 'Svelte App' }" />
       <!-- Nova component ends -->
       <h1 class="title">app-shell</h1>
       <h2 class="subtitle">NuxtJS based App Shell</h2>

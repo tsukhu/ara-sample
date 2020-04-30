@@ -8,9 +8,13 @@
     "start": "node dist/server.js"
   },
   "dependencies": {
+    "chart.js": "^2.9.3",
+    "echarts": "^4.7.0",
     "hypernova": "^2.5.0",
     "hypernova-vue": "^3.0.2",
+    "numeral": "^2.0.6",
     "vue": "^2.6.6",
+    "vue-echarts-v3": "^2.0.1",
     "vue-server-renderer": "^2.6.6"
   },
   "devDependencies": {

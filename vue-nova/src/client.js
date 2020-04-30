@@ -1,9 +1,9 @@
 import { load, Vue, mountComponent, loadById } from 'hypernova-vue'
-import Example from './components/Example.vue'
+import MonthlySalesChart from './components/MonthlySalesChart.vue';
 
 const render = (name, { node, data }) => {
-  if (name === 'Example-Vue') {
-    return mountComponent(Vue.extend(Example), node, data)
+  if (name === 'ExampleVue') {
+    return mountComponent(Vue.extend(MonthlySalesChart), node, data)
   }
 }
 
@@ -17,4 +17,4 @@ document.addEventListener('NovaMount', ({ detail }) => {
   }
 })
 
-load('Example-Vue').forEach(render.bind(null, 'Example-Vue'))
+load('ExampleVue').forEach(render.bind(null, 'ExampleVue'))

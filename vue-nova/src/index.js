@@ -3,13 +3,13 @@ import { renderVue, Vue } from 'hypernova-vue/server'
 import express from 'express'
 import path from 'path'
 
-import Example from './components/Example.vue'
+import MonthlySalesChart from './components/MonthlySalesChart.vue';
 
 hypernova({
   devMode: process.env.NODE_ENV !== 'production',
   getComponent (name) {
-    if (name === 'Example-Vue') {
-      return renderVue(name, Vue.extend(Example))
+    if (name === 'ExampleVue') {
+      return renderVue(name, Vue.extend(MonthlySalesChart))
     }
   },
   port: process.env.PORT || 3000,
